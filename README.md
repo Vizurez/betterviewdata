@@ -4,7 +4,7 @@ An alternative version of 'Better View Data' by Trudeau (http://forums.cloudsixt
 
 ## Installation
 
-__IMPORTANT:__ Disable auto-update for Trudeau's original plugin on the Plugin Center, otherwise this version will be overwritten!
+__IMPORTANT:__ Disable auto-update for Trudeau's original plugin on the Plugin Center, or unsubscribe from it, otherwise this version will be overwritten!
 
 Download and place _'betterviewdata'_ into _'garrysmod/gamemodes/cwhl2rp/plugins'_. If prompted, overwrite any existing files.
 
@@ -16,4 +16,5 @@ Methods of viewing the reason panel:
 
 ## Support
 
-http://forums.cloudsixteen.com/members/viz.8122/
+http://forums.cloudsixteen.com/members/viz.8122/  
+http://forums.cloudsixteen.com/members/trudeau.12094/
