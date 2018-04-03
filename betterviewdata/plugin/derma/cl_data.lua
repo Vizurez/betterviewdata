@@ -178,35 +178,44 @@ function PANEL:Populate(player, data, pointTable, CID)
 end;
 
 function PANEL:ShowFullReason(line)
-	local reasonPanel = vgui.Create("Panel", self);
-	reasonPanel:SetSize(325,350);
-	reasonPanel:Center();
-	
-	function reasonPanel:Paint(w, h)
-		draw.RoundedBox(4, 0, 0, w, h, Color(50, 50, 50, 255));
-		draw.RoundedBox(2, 1, 1, w-2, h-2, Color(120, 120, 120, 255));
-	end;
+	if (!PLUGIN.reasonPanelActive) then
 
-	local reasonText = vgui.Create("RichText", reasonPanel);
-	reasonText:SetVerticalScrollbarEnabled(false);
-	reasonText:InsertColorChange(20, 20, 20, 255);
-	reasonText:DockMargin(5, 5, 5, 0);
-	reasonText:Dock(FILL);
-	reasonText:AppendText(line:GetColumnText(1));
+		PLUGIN.reasonPanelActive = true;
 
-	function reasonText:PerformLayout()
-		reasonText:SetFontInternal("DermaDefault");
-		reasonText:SetBGColor(255, 255, 255, 255);
-	end;
+		local reasonPanel = vgui.Create("Panel", self);
+		reasonPanel:SetSize(325,350);
+		reasonPanel:Center();
 
-	local reasonClose = vgui.Create("DButton", reasonPanel);
-	reasonClose:SetTall(25);
-	reasonClose:DockMargin(4, 4, 4, 4);
-	reasonClose:Dock(BOTTOM);
-	reasonClose:SetText("Close");
+		function reasonPanel:OnRemove()
+			PLUGIN.reasonPanelActive = nil;
+		end;
+		
+		function reasonPanel:Paint(w, h)
+			draw.RoundedBox(4, 0, 0, w, h, Color(50, 50, 50, 255));
+			draw.RoundedBox(2, 1, 1, w-2, h-2, Color(120, 120, 120, 255));
+		end;
 
-	function reasonClose:DoClick()
-		reasonPanel:Remove();
+		local reasonText = vgui.Create("RichText", reasonPanel);
+		reasonText:SetVerticalScrollbarEnabled(false);
+		reasonText:InsertColorChange(20, 20, 20, 255);
+		reasonText:DockMargin(5, 5, 5, 0);
+		reasonText:Dock(FILL);
+		reasonText:AppendText(line:GetColumnText(1));
+
+		function reasonText:PerformLayout()
+			reasonText:SetFontInternal("DermaDefault");
+			reasonText:SetBGColor(255, 255, 255, 255);
+		end;
+
+		local reasonClose = vgui.Create("DButton", reasonPanel);
+		reasonClose:SetTall(25);
+		reasonClose:DockMargin(4, 4, 4, 4);
+		reasonClose:Dock(BOTTOM);
+		reasonClose:SetText("Close");
+
+		function reasonClose:DoClick()
+			reasonPanel:Remove();
+		end;
 	end;
 end;
 
