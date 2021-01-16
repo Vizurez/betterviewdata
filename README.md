@@ -1,6 +1,6 @@
 # Better View Data w/ View Full Reason
 
-An alternative version of 'Better View Data' by Trudeau (http://forums.cloudsixteen.com/threads/trudeaus-plugins.24586/), including a feature to view an entry's reason in a separate panel.
+An alternative version of 'Better View Data' by Trudeau (http://legacy.cloudsixteen.com/threads/trudeaus-plugins.24586/), including a feature to view an entry's reason in a separate panel.
 
 ## Installation
 
@@ -16,5 +16,5 @@ Methods of viewing the reason panel:
 
 ## Support
 
-http://forums.cloudsixteen.com/members/viz.8122/  
-http://forums.cloudsixteen.com/members/trudeau.12094/
+http://legacy.cloudsixteen.com/members/viz.8122/  
+http://legacy.cloudsixteen.com/members/trudeau.12094/
